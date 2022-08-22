@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* gobal reset */
+*,
+*::before,
+*::after{
+        margin: 0;
+        padding: 0;
+        box-sizing:inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /* 1rem = 10px */
+}
+
+body{
+    overflow-x: hidden;
+    font-family: "Vollkorn", sans-serif;
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+    color:#212832;
+    font-family: "Poppins", sans-serif;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #5E6282;
+}
+
+ul {
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+button{
+    font-family: "Poppins", sans-serif;
+}
+li{
+  list-style: none;
+}
+header{
+    padding: 50px 20%;
+}
+
+.logo-box { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .logo-box > div {
+    flex: 0.3;
+} */
+
+.nav {
+    display:flex ;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.nav-list{
+    /* list-style: none; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-list li.nav-item:not(:last-child){
+    margin-right: 5.5rem;
+}
+
+/* .nav-list li{
+    display: inline-block;
+    padding: 10px 20px;
+} */
+
+.nav-list li a{
+    transition: all 0.3s ease 0s;
+}
+/* btn */
+.btn{
+    padding: 1rem 1.5rem;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 1.4rem;
+}
+.btn-borderless {
+    border: none;
+}
+
+.btn-border {
+    border: solid 1px #212832;
+}
+
+.nav-list li a:hover{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nav-list-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-list-btn a:not(:last-child){
+    margin-right: 1rem;
+}
