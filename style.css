@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 /* gobal reset */
 *,
 *::before,
@@ -24,7 +26,7 @@ body{
 a{
     text-decoration: none;
     color:#212832;
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 p{
@@ -42,7 +44,7 @@ img{
 }
 
 button{
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 li{
   list-style: none;
@@ -86,6 +88,7 @@ header{
 .nav-list li a{
     transition: all 0.3s ease 0s;
 }
+
 /* btn */
 .btn{
     padding: 1rem 1.5rem;
@@ -114,4 +117,50 @@ header{
 
 .nav-list-btn a:not(:last-child){
     margin-right: 1rem;
+}
+
+.nav-list a{
+    font-size: 1.2;
+}
+.container {
+    width: 114rem;
+    margin: 0 auto ;
+ }
+
+ /* showcase */
+ .showcase{
+    padding: 4rem;
+
+ }
+ .showcase-flex{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    grid-gap: 6rem;
+ }
+ .showcase-text{
+    line-height: 1.3;
+    padding: 7rem;
+ }
+
+ .showcase-text h2{
+    color: #df4d30;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+ }
+ .showcase-text h1{
+    color: #181E4B;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+ }
+
+.showcase-text p{
+    margin-bottom: 2rem;
+    width: 80%;
+    line-height: 2;
+}
+.showcase-text button{
+    border-radius: 1rem;
+    background-color: #F1A501;
+    color: #f4f4f4;
+    border: none;
 }
