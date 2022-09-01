@@ -143,19 +143,6 @@ header{
     font-weight: 600;
 }
 
-.nav-list-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-list-btn a:not(:last-child){
-    margin-right: 1rem;
-}
-
-.nav-list a{
-    font-size: 1.2;
-}
 .container {
     width: 114rem;
     margin: 0 auto ;
