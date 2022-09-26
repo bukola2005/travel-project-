@@ -4,6 +4,7 @@ const navLinkBtns = document.querySelectorAll(".nav .btn");
 const nav = document.querySelector(".nav");
 const navListItems = document.querySelectorAll(".nav-item");
 const headerTag = document.querySelector("header");
+const toggle = document.getElementById('toggle');
 
 const allNavLinks = [...navListItems, ...navLinkBtns];
 
@@ -31,6 +32,12 @@ allNavLinks.forEach((el) => {
     }
   });
 });
+
+
+toggle.addEventListener('change', (e)=>{
+  e.preventDefault();
+    document.body.classList.toggle('dark', e.target.checked);
+})
 
 window.addEventListener("scroll", () => {
   headerTag.classList.toggle("sticky", window.scrollY > 0);

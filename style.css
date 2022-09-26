@@ -83,8 +83,9 @@ header{
     
 }
 
+
 header.sticky {
-  background-color: rgba(223, 105, 81, 0.35);
+  background-color: rgba(223, 105, 81, 0.5);
 }
 
 
@@ -115,7 +116,7 @@ header.sticky {
 
 
 .nav-list li a{
-    font-size: 1.2rem;
+    font-size: 2rem;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -145,7 +146,7 @@ header.sticky {
     padding: 1rem 1.5rem;
     cursor:pointer;
     transition: all 0.3s ease 0s;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     border: none;
 }
 .btn-borderless {
@@ -191,6 +192,44 @@ header.sticky {
 
 .btn.btn-gradient {
   padding: 1.2rem 2.5rem;
+}
+
+/* dark mode */
+
+input{
+  visibility: hidden;
+}
+
+.toggle-container{
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  display: flex;
+}
+
+body.dark{
+ background-color: rgba(0, 0, 0 ,60%);
+
+}
+
+label{
+  color: #fff;
+  user-select: none;
+ text-align: center;
+ padding: 1rem;
+  background-color: #F1A501;
+  border-radius: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+label:hover{
+  color: #080809;
 }
 
 
@@ -685,10 +724,10 @@ margin-top: 2rem;
 }
 
 .footer-containerflex > div:first-child h2{
-  font-size: 6rem;
+  font-size: 4rem;
   font-family: "poppins" sans-serif;
   color: #1e1d4c;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 
