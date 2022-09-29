@@ -17,7 +17,17 @@ body{
   background: var(--color-primary);
   background-size: cover;
 }
-
+.alert{
+  background-color: var(--color-error);
+  color: #333;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  -webkit-border-radius: var(--border-radius);
+  -moz-border-radius: var(--border-radius);
+  -ms-border-radius: var(--border-radius);
+  -o-border-radius: var(--border-radius);
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
 .container{
   width: 400px;
   max-width: 400px;
@@ -90,14 +100,30 @@ body{
   background: #fff;
 }
 
-.form-input-error{
+/* .form-input-error-message-fullname{
   color: var(--color-error);
   border-color: var(--color-error);
-}
+} */
 
-.form-input-error-message{
+.form-input-error-message-fullname{
   margin-top: 0.5rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  color: var(--color-error);
+
+}
+.form-input-error-message-email{
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-error);
+}
+.form-input-error-message-password{
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-error);
+}
+.form-input-error-message-confirmPassword{
+  margin-top: 0.5rem;
+  font-size: 1rem;
   color: var(--color-error);
 }
 
@@ -130,10 +156,10 @@ body{
   -o-transform: scale(0.98);
 }
 
-.form-button:disabled {
+/* .form-button:disabled {
   background-color: #dddd;
   cursor: not-allowed;
-}
+} */
 
 .form-text{
   text-align: center;

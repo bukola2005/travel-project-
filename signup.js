@@ -126,16 +126,16 @@ document.getElementById("agree").addEventListener('change',(e)=>{
 
 //    })
 
-document.getElementById("createAccount").addEventListener("change", e => {
-  e.preventDefault()
-  if(!fullName || !email || !password || password !== confirmPassword)
-{
- document.getElementById("signup-btn").disabled = true;
+// document.getElementById("createAccount").addEventListener("change", e => {
+//   e.preventDefault()
+//   if(!fullName || !email || !password || password !== confirmPassword)
+// {
+//  document.getElementById("signup-btn").disabled = true;
 
-}else {
-  document.getElementById("signup-btn").removeAttribute("disabled")
-}
+// }else {
+//   document.getElementById("signup-btn").removeAttribute("disabled")
+// }
 
-console.log("changs")
-})
+// console.log("changs")
+// })
 

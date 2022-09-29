@@ -4,10 +4,16 @@ const navLinkBtns = document.querySelectorAll(".nav .btn");
 const nav = document.querySelector(".nav");
 const navListItems = document.querySelectorAll(".nav-item");
 const headerTag = document.querySelector("header");
-const toggle = document.getElementById('toggle');
+let darkMode = JSON.parse(localStorage.getItem('darkMode'));
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+const lightModeToggle = document.querySelector('#light-mode-toggle')
+const companyLogoDark = document.querySelector('.company-logo.dark')
+const comapnyLogo = document.querySelector('.company-logo')
+
 
 const allNavLinks = [...navListItems, ...navLinkBtns];
-
+const toggleModeBtns = [lightModeToggle,darkModeToggle]
+// toggle
 function toggleMenu() {
   nav.classList.toggle("show");
 
@@ -34,11 +40,40 @@ allNavLinks.forEach((el) => {
 });
 
 
-toggle.addEventListener('change', (e)=>{
-  e.preventDefault();
-    document.body.classList.toggle('dark', e.target.checked);
+
+// dark mode
+const enableDarkMode = () =>{
+  document.body.classList.add("darkMode");
+  darkModeToggle.classList.add("showDark")
+  lightModeToggle.classList.add("showDark")
+  comapnyLogo.classList.add("showDark")
+  companyLogoDark.classList.add("showDark")
+};
+
+
+const toggleDarkModeFunc = () => {
+  document.body.classList.toggle("darkMode");
+  darkModeToggle.classList.toggle("showDark")
+  lightModeToggle.classList.toggle("showDark")
+  comapnyLogo.classList.toggle("showDark")
+  companyLogoDark.classList.toggle("showDark")
+  if(!darkMode)
+  {
+    localStorage.setItem("darkMode",true)
+  }else {
+    localStorage.setItem("darkMode",false)
+  }
+}
+
+
+toggleModeBtns.forEach(el => {
+  el.addEventListener("click", () => {
+    toggleDarkModeFunc()
+  })
 })
 
+
+// nav background
 window.addEventListener("scroll", () => {
   headerTag.classList.toggle("sticky", window.scrollY > 0);
   
@@ -47,6 +82,10 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("load", () => {
   headerTag.classList.toggle("sticky", window.scrollY > 0);
+  if(darkMode){
+    enableDarkMode()
+  }
+
 });
 
 // scrollreveal
