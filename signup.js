@@ -77,22 +77,39 @@ document.getElementById("password").addEventListener('blur',(e)=>{
   }
 })
 
-document.getElementById("confirmPassword").addEventListener('',(e)=>{
+
+
+document.getElementById("confirmPassword").addEventListener('blur',(e)=>{
   confirmPassword=e.target.value
   if(!confirmPassword){
     document.querySelector(".form-input-error-message-confirmPassword").innerHTML=
-    "confirmPassword is not entry"
-  }
-  else{
-    if(confirmPassword!==password){
+    "confirmPassword is invalid"
+  }else if(confirmPassword!==password){
       document.querySelector(".form-input-error-message-confirmPassword").innerHTML=
       "confirmPassword does not match"
-    }else{
+    }
+    else{
       document.querySelector(".form-input-error-message-confirmPassword").innerHTML=
       null
     }
-  }
-})
+  })
+
+// document.getElementById("confirmPassword").addEventListener('',(e)=>{
+//   confirmPassword=e.target.value
+//   if(!confirmPassword){
+//     document.querySelector(".form-input-error-message-confirmPassword").innerHTML=
+//     "confirmPassword is"
+//   }
+//   else{
+//     if(confirmPassword!==password){
+//       document.querySelector(".form-input-error-message-confirmPassword").innerHTML=
+//       "confirmPassword does not match"
+//     }else{
+//       document.querySelector(".form-input-error-message-confirmPassword").innerHTML=
+//       null
+//     }
+//   }
+// })
 
 document.getElementById("agree").addEventListener('change',(e)=>{
     isAgreed =e.target.checked;

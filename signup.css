@@ -5,12 +5,15 @@ body{
   --color-primary-dark:#007f67;
   --color-secondary:#252c6a;
   --color-error:#cc3333;
+  --color-ligth-error:#f78181;
   --color-success:#4bb544;
   --border-radius: 4px;
 
   margin: 0;
+  /* padding: 0; */
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 18px;
@@ -18,15 +21,20 @@ body{
   background-size: cover;
 }
 .alert{
-  background-color: var(--color-error);
-  color: #333;
-  flex-direction: column;
+    display: inline-block;
+    padding: 1rem;
+    margin: 0 1rem;
+    width: 25%;
+  background-color: var(--color-ligth-error);
   border-radius: var(--border-radius);
   -webkit-border-radius: var(--border-radius);
   -moz-border-radius: var(--border-radius);
   -ms-border-radius: var(--border-radius);
   -o-border-radius: var(--border-radius);
-  box-shadow: rgba(0, 0, 0, 0.2);
+}
+.alert > h3{
+  text-align: center;
+  /* gap: 2; */
 }
 .container{
   width: 400px;
