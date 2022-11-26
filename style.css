@@ -34,7 +34,7 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
   :root{
     --hover-color:#ff7750;
@@ -53,7 +53,7 @@
   }
 
 
-}
+} */
 .lightMode {
   display: none;
 }
